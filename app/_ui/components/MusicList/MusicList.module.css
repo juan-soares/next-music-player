@@ -1,6 +1,9 @@
 .musicList {
   list-style-type: decimal;
   margin: 32px 0 0;
+  min-height: 100px;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .musicListItem {
@@ -11,6 +14,11 @@
 .musicListItem:hover {
   opacity: 0.8;
   background-color: rgba(255, 255, 255, 255, 0.1);
+}
+
+.musicListItem.selected::marker,
+.musicListItem.selected .musicTitle {
+  color: var(--primary);
 }
 
 .listItemInformation {
