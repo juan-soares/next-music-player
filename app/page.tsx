@@ -1,5 +1,9 @@
-import style from './page.module.css';
+import { MusicList } from "./_ui/components/MusicList";
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <div>
+      <MusicList />
+    </div>
+  );
 }

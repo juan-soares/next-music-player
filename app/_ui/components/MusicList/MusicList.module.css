@@ -1,0 +1,40 @@
+.musicList {
+  list-style-type: decimal;
+  margin: 32px 0 0;
+}
+
+.musicListItem {
+  padding: 8px 32px 8px 8px;
+  cursor: pointer;
+}
+
+.musicListItem:hover {
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 255, 0.1);
+}
+
+.listItemInformation {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "musicTitle musicDuration"
+    "musicArtist musicDuration";
+  align-items: center;
+}
+
+.musicTitle {
+  grid-area: "musicTitle";
+}
+
+.musicArtist {
+  color: var(--text-secondary);
+  grid-area: "musicArtist";
+}
+
+.musicDuration {
+  color: var(--text-secondary);
+  width: 80px;
+  text-align: right;
+  grid-area: "musicDuration";
+}

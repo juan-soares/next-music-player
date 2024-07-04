@@ -3,7 +3,7 @@
   --background: #121212;
   --background-paper: #181818;
   --text-primary: #e5e5e5;
-  --text-secondary: #7c7c7c7;
+  --text-secondary: #c7c7c7c7;
   --divider: rgba(255, 255, 255, 0.1);
 }
 
@@ -19,6 +19,6 @@ body {
 }
 
 body {
-  color: var(--primary);
+  color: var(--text-primary);
   background-color: var(--background);
 }
