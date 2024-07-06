@@ -52,7 +52,7 @@ setCanPlay(true)
     }
    }
 
-   function changeTime(percent){
+   function changeTime(percent:number){
 if(music) {
     audioRef.current.currentTime = (percent / 100) * duration
 }

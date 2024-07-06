@@ -1,21 +1,21 @@
 import styles from "./MusicList.module.css";
 import { IMusic } from "@/app/_lib/interfaces";
 import { displayFormatedTime } from "@/app/_lib/utils";
+import { AppContext } from "@/app/page";
+import { useContext } from "react";
 
-interface IProps {
-  musics: IMusic[];
-  selectedMusic: IMusic;
-  onSelect: (musicTitle: string) => void;
-}
 
-export function MusicList({ musics, selectedMusic, onSelect }: IProps) {
+
+export function MusicList() {
+const { musicList,  selectMusic } = useContext(AppContext);
+
   function isSelected(musicTitle: string) {
     return selectedMusic.title === musicTitle ? styles["selected"] : "";
   }
 
   return (
     <ul className={styles.musicList}>
-      {musics.map(({ title, durationInSeconds, artist }) => (
+      {musicList.map(({ title, durationInSeconds, artist }) => (
         <li
           className={[styles["musicListItem"], isSelected(title)].join(" ")}
           onClick={() => onSelect(title)}
